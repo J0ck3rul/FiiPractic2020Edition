@@ -23,7 +23,7 @@
       true,
       "element",
       [
-        "app"
+        "fp"
       ],
       "kebab-case"
     ],
@@ -36,7 +36,7 @@
       true,
       "attribute",
       [
-        "app"
+        "fp"
       ],
       "camelCase"
     ],
