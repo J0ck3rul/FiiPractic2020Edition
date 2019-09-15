@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CommingSoonModule } from './comming-soon/comming-soon.module';
 import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
@@ -12,9 +13,10 @@ import { MainPageComponent } from './main-page/main-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommingSoonModule
   ],
-  providers: [],
+  providers: [CommingSoonModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

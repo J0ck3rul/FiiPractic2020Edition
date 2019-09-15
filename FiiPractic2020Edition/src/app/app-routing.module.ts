@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CommingSoonModule } from './comming-soon/comming-soon.module';
 import { MainPageComponent } from './main-page/main-page.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'comming-soon',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    component: MainPageComponent
+    path: 'comming-soon',
+    loadChildren: () => import('./comming-soon/comming-soon.module').then(opt => opt.CommingSoonModule)
   }
 ];
 
