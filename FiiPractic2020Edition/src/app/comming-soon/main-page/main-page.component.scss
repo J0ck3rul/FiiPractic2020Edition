@@ -1,21 +1,28 @@
-div {
+.container {
   background-color: darkolivegreen;
   background-size: cover;
   color: white;
-  height: 100%;
+  height: calc(100% - 80px);
   width: 100%;
-  padding-top: 80px;
   display: flex;
-}
+  padding-top: 80px;
 
+}
 fieldset {
   width: 100%;
   margin: 0px 100px;
   border: 15px solid white;
+
+  display: flex;
+  flex-direction: column;
   legend {
     font-size: 120px;
     margin: auto;
     padding: 0px 140px;
   }
+  .counter {
+
+  }
+  margin-bottom: 50px;
 }
 

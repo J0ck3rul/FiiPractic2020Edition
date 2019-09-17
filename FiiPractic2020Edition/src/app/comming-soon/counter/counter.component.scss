@@ -1,0 +1,18 @@
+.container{
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 160px;
+}
+.counter-item{
+  display: flex;
+  flex-direction: column;
+  .number{
+    font-size: 200px;
+  }
+  .info{
+    font-size: 60px;
+  }
+}
+.between{
+  font-size: 200px;
+}
