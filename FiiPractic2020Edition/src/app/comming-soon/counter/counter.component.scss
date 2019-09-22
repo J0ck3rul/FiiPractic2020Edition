@@ -1,18 +1,45 @@
-.container{
+.container {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   padding: 0px 160px;
+  @media screen and (max-width: 1250px) {
+    padding: 0px 50px;
+  }
 }
-.counter-item{
+.counter-item {
   display: flex;
   flex-direction: column;
-  .number{
+  align-items: center;
+
+  .number {
+    font-family: "Gotham-Medium";
+    font-weight: 300;
     font-size: 200px;
+    @media screen and (max-width: 1400px) {
+      font-size: 150px;
+    }
+    @media screen and (max-width: 1250px) {
+      font-size: 130px;
+    }
   }
-  .info{
+  .info {
+    font-family: "Gotham-Light";
     font-size: 60px;
+    @media screen and (max-width: 1400px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 1250px) {
+      font-size: 30px;
+    }
   }
 }
-.between{
+.between {
   font-size: 200px;
+  @media screen and (max-width: 1400px) {
+    font-size: 150px;
+  }
+  @media screen and (max-width: 1250px) {
+    font-size: 130px;
+  }
 }

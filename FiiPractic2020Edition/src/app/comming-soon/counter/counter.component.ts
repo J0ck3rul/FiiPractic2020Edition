@@ -1,37 +1,26 @@
 import { Component } from '@angular/core';
-
+import * as moment from 'moment';
 @Component({
   selector: 'fp-counter',
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.scss']
 })
 export class CounterComponent  {
-  public startDate: Date = new Date();
+  public dateNow: any;
+  public startEvent: any;
   public duration: Date;
-  public days: number = 23;
-  public hours: number = 23;
-  public minutes: number = 23;
-  /**
-   *
-   */
+  public days: number;
+  public hours: number;
+  public minutes: number;
+
   constructor() {
-    this.startDate.setFullYear(2019, 8, 19);
-    this.startDate.setHours(9, 45);
+    this.dateNow = moment();
+    this.startEvent = moment('2019-10-22');
+    this.startEvent.set('hours', 9);
+    this.startEvent.set('minutes', 15);
 
-    this.duration = new Date(this.startDate.getDate() - new Date().getDate());
-    this.days = this.duration.getDay();
-    this.minutes = this.duration.getMinutes();
-    this.days = this.duration.getHours();
-
-    console.log(new Date().getDay());
-    console.log(this.startDate.getDay());
-
-
-
-    this.minutes = new Date().getMinutes() - this.startDate.getMinutes() ;
-    this.hours = new Date().getHours() - this.startDate.getHours();
-
-    this.days = new Date().getDay() - this.startDate.getDay() ;
+    this.days = this.startEvent.diff(this.dateNow, 'days');
+    this.hours = this.startEvent.diff(this.dateNow, 'hours') % 24;
+    this.minutes = this.startEvent.diff(this.dateNow, 'minutes') % 60;
   }
-
 }
