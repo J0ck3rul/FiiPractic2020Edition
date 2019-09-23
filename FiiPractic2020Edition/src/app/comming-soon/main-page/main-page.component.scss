@@ -1,12 +1,14 @@
 .container {
   background-image: url("../../../assets/comming-soon/background-image.jpg");
-  // background: transparent
   background-size: cover;
   color: white;
+
   height: calc(100% - 80px);
   width: 100%;
+
   display: flex;
   padding-top: 80px;
+
   &::before {
     content: "";
 
@@ -29,8 +31,7 @@ fieldset {
 
   display: flex;
   flex-direction: column;
-
-  margin-bottom: 50px;
+  justify-content: space-around;
 
   legend {
     font-size: 120px;
@@ -40,6 +41,9 @@ fieldset {
 
     font-family: "Gotham-Black";
   }
+  fp-counter {
+    height: 80%;
+  }
   .info-text {
     font-family: "Gotham-Medium";
     font-size: 45px;
@@ -48,11 +52,17 @@ fieldset {
     letter-spacing: 0;
   }
 }
-
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 @media screen and (max-width: 1400px) {
   fieldset {
     legend {
-      font-size: 80px;
+      font-size: 100px;
+      padding: 0 85px;
     }
     .info-text {
       font-size: 35px;
@@ -61,12 +71,59 @@ fieldset {
 }
 @media screen and (max-width: 1250px) {
   fieldset {
-    margin: 0 25px;
+    margin: 0 35px;
     legend {
-      font-size: 60px;
+      font-size: 90px;
+    }
+    .info-text {
+      font-size: 35px;
+    }
+  }
+}
+@media screen and (max-width: 925px) {
+  fieldset {
+    legend {
+      font-size: 75px;
+      padding: 0 50px;
     }
     .info-text {
       font-size: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  fieldset {
+    legend {
+      font-size: 60px;
+      padding: 0 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  fieldset {
+    legend {
+      font-size: 45px;
+    }
+    .info-text {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding-top: 40px;
+    height: calc(100% - 40px);
+  }
+  fieldset {
+    margin: 0 15px;
+    legend {
+      font-size: 45px;
+    }
+    .info-text {
+      text-align: center;
     }
   }
 }
