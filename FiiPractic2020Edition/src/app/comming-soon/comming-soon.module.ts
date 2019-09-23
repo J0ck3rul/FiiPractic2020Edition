@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
 
 import { CommingSoonRoutingModule } from './comming-soon-routing.module';
 import { CounterComponent } from './counter/counter.component';
@@ -10,8 +9,7 @@ import { MainPageComponent } from './main-page/main-page.component';
   declarations: [MainPageComponent, CounterComponent],
   imports: [
     CommonModule,
-    CommingSoonRoutingModule,
-    MatIconModule
+    CommingSoonRoutingModule
   ],
   exports: [
     MainPageComponent
