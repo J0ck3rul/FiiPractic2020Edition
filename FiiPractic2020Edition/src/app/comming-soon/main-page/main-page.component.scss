@@ -112,6 +112,9 @@ fieldset {
   .container {
     padding-top: 40px;
     height: calc(100% - 40px);
+    &::before {
+      height: calc(100% + 40px);
+    }
   }
   fieldset {
     margin: 0 15px;
@@ -127,5 +130,11 @@ fieldset {
 @media screen and (max-width: 440px) {
   fieldset {
     margin: 0 10px;
+    legend {
+      font-size: 35px;
+    }
+    .info-text {
+      text-align: center;
+    }
   }
 }
