@@ -7,8 +7,8 @@
   width: 100%;
 
   display: flex;
-  padding-top: 60px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   &::before {
     content: "";
 
@@ -41,14 +41,10 @@ fieldset {
 
     font-family: "Gotham-Black";
   }
-  fp-counter {
-    height: 80%;
-  }
   .info-text {
     font-family: "Gotham-Medium";
     font-size: 45px;
-    margin: auto;
-    text-align: left;
+    text-align: center;
     letter-spacing: 0;
   }
 }
@@ -125,5 +121,11 @@ fieldset {
     .info-text {
       text-align: center;
     }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  fieldset {
+    margin: 0 10px;
   }
 }
