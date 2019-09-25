@@ -41,14 +41,10 @@ fieldset {
 
     font-family: "Gotham-Black";
   }
-  fp-counter {
-    height: 80%;
-  }
   .info-text {
     font-family: "Gotham-Medium";
     font-size: 45px;
-    margin: auto;
-    text-align: left;
+    text-align: center;
     letter-spacing: 0;
   }
 }
@@ -116,11 +112,26 @@ fieldset {
   .container {
     padding-top: 40px;
     height: calc(100% - 40px);
+    &::before {
+      height: calc(100% + 40px);
+    }
   }
   fieldset {
     margin: 0 15px;
     legend {
       font-size: 45px;
+    }
+    .info-text {
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 440px) {
+  fieldset {
+    margin: 0 10px;
+    legend {
+      font-size: 35px;
     }
     .info-text {
       text-align: center;
