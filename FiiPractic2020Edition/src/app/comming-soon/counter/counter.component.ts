@@ -1,11 +1,12 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import * as moment from 'moment';
 import { Date } from '../models/date';
 @Component({
   selector: 'fp-counter',
   templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.scss']
+  styleUrls: ['./counter.component.scss'],
 })
+
 export class CounterComponent implements AfterViewInit, OnInit  {
   public dateNow: any;
   public startEvent: any;
